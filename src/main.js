@@ -1,13 +1,17 @@
 const canvas = document.querySelector("canvas")
+document.addEventListener("keydown", (e) => {
+  console.log(e.key)
+})
 
 class Game {
   constructor() {
     this.ctx = canvas.getContext("2d");
-    this.size = 30;
-    this.snake = [{ x: 200, y: 200 }, { x: 230, y: 200 }];
+    this.size = 20;
+    this.snake = [{ x: 200, y: 200 }, { x: 220, y: 200 }];
+    this.pontuation = 0;
     this.direction = '';
-    this.difficulty = 'easy'
-    this.mode = [{mode:'easy', value:400},{mode:'medium', value:300},{mode:'hard', value:100},{mode:'very hard', value:80}];
+    this.difficulty = 'medium'
+    this.mode = [{mode:'easy', value:300},{mode:'medium', value:200},{mode:'hard', value:100},{mode:'very hard', value:80}];
   }
 
   initGame() {
@@ -25,6 +29,7 @@ class Game {
   }
 
   renderGame(){
+    this.getDirection()
     this.ctx.clearRect(0, 0, 500, 500);
     this.moveSnake();
     this.drawSnake();
@@ -60,6 +65,22 @@ class Game {
     this.snake.shift()
   }
 
+  getDirection(){
+    document.addEventListener("keydown", ({key})=>{
+      if(key == "ArrowRight"){
+        this.direction = 'right'
+      }
+      if(key == "ArrowLeft"){
+        this.direction = 'left'
+      }
+      if(key == "ArrowUp"){
+        this.direction = 'up'
+      }
+      if(key == "ArrowDown"){
+        this.direction = 'down'
+      }
+    })
+  }
 }
 
 const game = new Game();
