@@ -1,8 +1,4 @@
 const canvas = document.querySelector("canvas")
-document.addEventListener("keydown", (e) => {
-  console.log(e.key)
-})
-
 const number = (min, max) => {
   return Math.round(Math.random() * (max - min) + min);
 }
@@ -41,10 +37,10 @@ class Game {
   renderGame(){
     this.ctx.clearRect(0, 0, 500, 500);
     this.drawApple();
-    this.eatApple();
     this.getDirection();
     this.moveSnake();
     this.drawSnake();
+    this.eatApple();
   }
 
   randomPositionAplle(){
@@ -117,7 +113,20 @@ class Game {
     const {x, y} = head;
 
     if(x == this.apple.x && y == this.apple.y){
-      console.log('comeu');
+      if(this.apple.tipo.name == "dourado"){
+        this.pontuation += 40;
+      } else if(this.apple.tipo.name == "verde"){
+        this.pontuation += 25;
+      } else {
+        this.pontuation += 10;
+      }
+
+      this.snake.push(head);
+      this.apple = {
+        x:this.randomPositionAplle(),
+        y:this.randomPositionAplle(),
+        tipo: this.randomColorApple(),
+      };
     }
 
   }
