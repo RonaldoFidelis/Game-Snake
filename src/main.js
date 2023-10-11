@@ -213,23 +213,23 @@ retry.addEventListener('click', () => {
   menu.style.display = 'flex';
 })
 
-arrowLeft.addEventListener('click', () =>{
-  if(game.direction != 'right'){
+arrowLeft.addEventListener('click', () => {
+  if (game.direction != 'right') {
     game.direction = 'left';
   }
 });
-arrowUp.addEventListener('click', () =>{
-  if(game.direction != 'down'){
+arrowUp.addEventListener('click', () => {
+  if (game.direction != 'down') {
     game.direction = 'up';
   }
 });
-arrowDown.addEventListener('click', () =>{
-  if(game.direction != 'up'){
+arrowDown.addEventListener('click', () => {
+  if (game.direction != 'up') {
     game.direction = 'down';
   }
 });
-arrowRight.addEventListener('click', () =>{
-  if(game.direction != 'left'){
+arrowRight.addEventListener('click', () => {
+  if (game.direction != 'left') {
     game.direction = 'right';
   }
 });
