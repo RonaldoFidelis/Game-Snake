@@ -4,6 +4,10 @@ const start = document.querySelector('.btn-start');
 const menu = document.querySelector('.menu');
 const containerScore = document.querySelector('.container-point');
 const retry = document.querySelector('.btn-retry');
+const arrowLeft = document.querySelector('.left');
+const arrowUp = document.querySelector('.up');
+const arrowDown = document.querySelector('.down');
+const arrowRight = document.querySelector('.right');
 const effectStart = new Audio('./assets/start.mp3');
 const effectDeath = new Audio('./assets/death.mp3');
 const effectEat = new Audio('./assets/eat.mp3');
@@ -113,6 +117,7 @@ class Game {
   }
 
   getDirection() {
+
     document.addEventListener("keydown", ({ key }) => {
       if (key == "ArrowRight" && this.direction != 'left') {
         this.direction = 'right'
@@ -126,7 +131,7 @@ class Game {
       if (key == "ArrowDown" && this.direction != 'up') {
         this.direction = 'down'
       }
-    })
+    });
   }
 
   eatApple() {
@@ -203,3 +208,24 @@ retry.addEventListener('click', () => {
   over.style.display = 'none';
   menu.style.display = 'flex';
 })
+
+arrowLeft.addEventListener('click', () =>{
+  if(game.direction != 'right'){
+    game.direction = 'left';
+  }
+});
+arrowUp.addEventListener('click', () =>{
+  if(game.direction != 'down'){
+    game.direction = 'up';
+  }
+});
+arrowDown.addEventListener('click', () =>{
+  if(game.direction != 'up'){
+    game.direction = 'down';
+  }
+});
+arrowRight.addEventListener('click', () =>{
+  if(game.direction != 'left'){
+    game.direction = 'right';
+  }
+});
