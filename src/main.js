@@ -145,11 +145,11 @@ class Game {
       effectEat.play();
       this.snake.push(head);
       if (this.apple.tipo.name == "dourado") {
-        this.pontuation += 40;
+        this.pontuation += 45;
       } else if (this.apple.tipo.name == "verde") {
-        this.pontuation += 25;
+        this.pontuation += 30;
       } else {
-        this.pontuation += 10;
+        this.pontuation += 20;
       }
       score.innerHTML = `${this.pontuation}`;
 
