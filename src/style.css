@@ -184,3 +184,25 @@ canvas {
   font-size: 2rem;
   list-style: none;
 }
+
+.copy{
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-p{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.copy-link{
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .4s;
+}
+.copy-link:hover{
+  color: #2A4696;
+}

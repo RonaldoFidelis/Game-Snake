@@ -6,7 +6,7 @@
 
 <br>
 
-> Jogue você mesmo: <a href="" target="_blank">Snake Game</a>
+> Jogue você mesmo: <a href="https://game-snake-gilt.vercel.app/" target="_blank">Snake Game</a>
 
 ## Objetivo
 
