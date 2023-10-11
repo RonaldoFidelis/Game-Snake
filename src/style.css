@@ -1,17 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 * {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: #191919;
+  background: #E4DDDD;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 5px;
   min-height: 100vh;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.title-menu{
+  color: white;
+  font-size: 3rem;
+}
+
+.menu label{
+  color: white;
+
+}
+
+.info-apple{
+  background: #E4DDDD;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  width: 200px;
+  border-top: 20px solid  #D70419;
+}
+
+.info-title{
+  font-size: 1rem;
+
+}
+
+.types-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.list-apple{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.apple-type{
+  font-size: 25px;
+}
+
+.gold{
+  color: #EDCB23;
+}
+
+.green{
+  color: #68D60D;
+}
+
+.normal{
+  color: #D70419;
+}
+
+.apple-point {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.btn-start{
+  border: none;
+  margin-top: 5px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container-point {
+  font-family: monospace;
+  width: 500px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding-left: 2px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.label-score {
+  font-size: 20px;
+}
+
+.score{
+  font-size: 20px;
+}
+
+.gameOver{
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.msg-gamerOver {
+  color: white;
+  font-size: 2rem;
+}
+
+.score-final {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.btn-retry{
+  background: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 canvas {

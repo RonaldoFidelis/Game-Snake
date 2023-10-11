@@ -5,10 +5,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Snake game</title>
 </head>
 
 <body>
+  <form class="menu">
+    <span class="info-apple">
+      <h1 class="info-title">Tipos de maçã</h1>
+      <ul class="types-list">
+        <li class="list-apple">
+          <i class="apple-type gold fa-solid fa-apple-whole"></i>
+          <p class="apple-point">40 Pontos</p>
+        </li>
+        <li class="list-apple">
+          <i class="apple-type green fa-solid fa-apple-whole"></i>
+          <p class="apple-point">25 Pontos</p>
+        </li>
+        <li class="list-apple">
+          <i class="apple-type normal fa-solid fa-apple-whole"></i>
+          <p class="apple-point">10 Pontos</p>
+        </li>
+      </ul>
+    </span>
+    <h1 class="title-menu">Snake Game</h1>
+    <div class="mods">
+      <label for="mod-easy">Fácil</label>
+      <input type="radio" name="mod-game" id="mod-easy" value="easy">
+      <label for="mod-normal">Normal</label>
+      <input type="radio" name="mod-game" id="mod-normal" value="medium">
+      <label for="mod-hard">Dificil</label>
+      <input type="radio" name="mod-game" id="mod-hard" value="hard">
+      <label for="mod-hard">Extremo</label>
+      <input type="radio" name="mod-game" id="mod-hard" value="very hard">
+  </div>
+  <button class="btn-start"><i class="fa-solid fa-play"></i>
+  </button>
+  </form>
+  <div class="gameOver">
+    <h1 class="msg-gamerOver">Game Over</h1>
+    <p class="score-final"></p>
+    <button class="btn-retry">
+      <i class="fa-solid fa-play"></i>
+    </button>
+  </div>
+  <span class="container-point">
+    <p class="label-score">Score:</p>
+    <p class="score">00</p>
+  </span>
   <canvas width="500" height="500"></canvas>
   <script src="./src/main.js"></script>
 </body>
