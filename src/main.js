@@ -4,6 +4,7 @@ const start = document.querySelector('.btn-start');
 const menu = document.querySelector('.menu');
 const containerScore = document.querySelector('.container-point');
 const retry = document.querySelector('.btn-retry');
+const containerControl = document.querySelector('.container-control');
 const arrowLeft = document.querySelector('.left');
 const arrowUp = document.querySelector('.up');
 const arrowDown = document.querySelector('.down');
@@ -56,6 +57,7 @@ class Game {
     scoreFinal.innerHTML = `Score ${this.pontuation}`;
     canvas.style.filter = 'blur(2px)';
     containerScore.style.display = 'none';
+    containerControl.style.display = 'none';
   }
 
   renderGame() {
@@ -184,11 +186,13 @@ class Game {
 
 const game = new Game();
 containerScore.style.display = 'none';
+containerControl.style.display = 'none';
 canvas.style.filter = 'blur(2px)';
 
 start.addEventListener('click', (e) => {
   e.preventDefault();
   containerScore.style.display = 'flex';
+  containerControl.style.display = 'flex';
   canvas.style.filter = '';
 
   menu.style.display = 'none';
